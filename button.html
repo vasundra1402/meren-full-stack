@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+
+    <h2>Enter a value</h2>
+    <form id="myForm">
+        <input type="text" id="textBox" placeholder="Enter text here" required>
+        <button type="button" onclick="addToArray()">Submit</button>
+    </form>
+
+    <script>
+        // Array to store the entered values
+        let valuesArray = [];
+
+        function addToArray() {
+            // Get the value from the textbox
+            let inputValue = document.getElementById('textBox').value;
+            
+            // Add the value to the array if it's not empty
+            if (inputValue.trim() !== "") {
+                valuesArray.push(inputValue);
+            }
+
+            // Clear the textbox
+            document.getElementById('textBox').value = "";
+
+            // Print the array to the console
+            console.log(valuesArray);
+        }
+    </script>
+
+</body>
+</html>
